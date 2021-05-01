@@ -1,35 +1,32 @@
 /* eslint-disable no-undef */
-import React, { FC } from 'react';
-import { useEffect, useState } from 'react';
+import React, { FC } from "react";
+import { useEffect, useState } from "react";
+import Layout from "./layout/Layout";
 
 const App: FC = () => {
-  const [msg, setMsg] = useState('');
-  const liffId = '1655909167-Wdb43gao';
+  const [msg, setMsg] = useState("");
+  const liffId = "1655909167-Wdb43gao";
   useEffect(() => {
     // do something here :)
-    liff.init({
-      liffId,
-    }).then(() => {
-      console.log('not bad喔')
-    }).catch((err) => {
-      console.log(err);
-      console.log('inside error');
-    });
+    liff
+      .init({
+        liffId,
+      })
+      .then(() => {
+        console.log("not bad喔");
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log("inside error");
+      });
 
     if (!liff.isLoggedIn()) {
       setMsg("your line is not login!");
     } else {
       setMsg("your line is login!");
     }
-    return () => {
-
-    }
-  }, [])
-  return (
-    <div className="container">
-      hello, world, {msg}
-    </div>
-  );
-}
+  }, []);
+  return <Layout>hello, world</Layout>;
+};
 
 export default App;

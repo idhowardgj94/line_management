@@ -4,5 +4,10 @@
   "editor.formatOnSave": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }

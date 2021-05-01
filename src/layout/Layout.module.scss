@@ -1,0 +1,12 @@
+// @type
+.layout {
+  display: flex;
+  width: 100%;
+}
+
+.navbar {
+  position: relative;
+  box-sizing: border-box;
+  overflow: scroll;
+  max-height: 100vh;
+}
