@@ -15,14 +15,14 @@ module.exports = {
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
+  devOptions: {
+    tailwindConfig: "./tailwind.config.js",
+  },
   optimize: {
     /* Example: Bundle your final build: */
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
-  },
-  devOptions: {
     /* ... */
   },
   buildOptions: {

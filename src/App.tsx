@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { FC } from "react";
 import { useEffect, useState } from "react";
-import Layout from "./layout/Layout";
+import Layout from "./layout";
 
 const App: FC = () => {
   const [msg, setMsg] = useState("");
@@ -26,7 +26,7 @@ const App: FC = () => {
       setMsg("your line is login!");
     }
   }, []);
-  return <Layout>hello, world</Layout>;
+  return <Layout />;
 };
 
 export default App;

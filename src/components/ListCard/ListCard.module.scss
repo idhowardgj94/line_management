@@ -3,10 +3,7 @@
   border-bottom: 2px;
   border-width: 2px;
 }
-.container {
-  @apply lg:container;
-  flex-wrap: wrap;
-}
+
 .img_container {
   @apply rounded-full items-center justify-center;
   position: relative;
@@ -20,7 +17,7 @@
   width: 80px;
 }
 .content_container {
-  max-width: 190px;
+  max-width: 200px;
 }
 .img {
   object-fit: fill;

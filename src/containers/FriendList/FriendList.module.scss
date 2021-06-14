@@ -1,0 +1,30 @@
+.list_card {
+  height: 100px;
+  border-bottom: 2px;
+  border-width: 2px;
+}
+.container {
+  @apply container;
+  flex-wrap: wrap;
+}
+.img_container {
+  @apply rounded-full items-center justify-center;
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  align-self: center;
+  height: 80px;
+  overflow: hidden;
+  // max-width: 80px;
+  // min-width: 80px;
+  // width: 80px;
+}
+.content_container {
+  max-width: 190px;
+}
+.img {
+  object-fit: fill;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
