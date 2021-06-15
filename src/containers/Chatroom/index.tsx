@@ -1,4 +1,6 @@
 import React, { FC } from "react";
+import MessageBox from "../../components/MessageBox";
+import MessageCard from "../../components/MessageCard";
 import ACTIONS from "../../layout/action";
 import styles from "./Chatroom.module.scss";
 interface ChatroomProps {
@@ -20,12 +22,15 @@ const Chatroom: FC<ChatroomProps> = ({ dispatch }) => {
         </h1>
       </div>
       <main className={`${styles.chatroom_container} p-2 overflow-y-scroll`}>
-        hi how are you
+        <MessageCard msgType="received">hi, how are you</MessageCard>
+        <MessageCard msgType="send">fine</MessageCard>
+        <MessageCard msgType="send">how about you</MessageCard>
+        <MessageCard msgType="received">fine</MessageCard>
       </main>
       <div
         className={`${styles.message_container} p-2 bg-gray-50 flex flex-row`}
       >
-        live a message
+        <MessageBox />
       </div>
     </div>
   );
