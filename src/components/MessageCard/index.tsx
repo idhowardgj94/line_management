@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 interface MessageBoxProps {
-  msgType: "send" | "received";
+  msgType: "send" | "Received";
 }
 const MessageBox: FC<MessageBoxProps> = ({ msgType, children }) => {
   return (

@@ -5,7 +5,7 @@ const ACTIONS = {
 
 type Actions = {
   type: string,
-  payload: unknown,
+  payload: Record<string, any>,
 };
 
 export default ACTIONS;

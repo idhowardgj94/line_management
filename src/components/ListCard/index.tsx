@@ -1,30 +1,38 @@
 import React, { FC } from "react";
 import styles from "./ListCard.module.scss";
-import test from "../../assets/test.jpg";
 import ACTIONS from "../../layout/action";
+import { Chat } from "../../model";
 interface ListCardProps {
   dispatch: (action: unknown) => void;
+  data: Chat;
 }
-const ListCard: FC<ListCardProps> = ({ dispatch }) => {
+
+// TODO 日期...
+const ListCard: FC<ListCardProps> = ({ dispatch, data }) => {
+  const { userId, userName } = data;
   return (
     <div
       className={`${styles.list_card} flex flex-row ml-2 flex-1 hover:bg-gray-200 cursor-pointer px-2`}
       onClick={() =>
         dispatch({
           type: ACTIONS.CLICK_FRIEND_CARD,
+          payload: {
+            userId,
+            userName,
+          },
         })
       }
     >
       <div className={`${styles.img_container}`}>
-        <img className={`${styles.img}`} src={test} alt="test" />
+        <img className={`${styles.img}`} src={data.picture} alt="test" />
       </div>
       <div className={`flex-1 flex flex-col my-2 mx-4 container`}>
-        <div className="font-bold text-lg flex-1">金城武</div>
+        <div className="font-bold text-lg flex-1">{data.userName}</div>
         <div className="text-gray-800 text-sm flex-1">2020-01-01 12:00:00</div>
         <div
           className={`flex-1 truncate overflow-ellipsis  container ${styles.content_container}`}
         >
-          我好像有點帥 oeoeuhoruhoecrhueorchoeuo.
+          {data.text}
         </div>
       </div>
     </div>

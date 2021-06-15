@@ -20,7 +20,7 @@ export const Layout: FC = () => {
       <div
         className={`${screen === "friends-list" && "hidden"} md:block flex-1`}
       >
-        <Chatroom dispatch={dispatch} />
+        <Chatroom dispatch={dispatch} state={state} />
       </div>
     </div>
   );
