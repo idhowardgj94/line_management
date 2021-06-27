@@ -3,8 +3,8 @@
 module.exports = {
   mount: {
     /* ... */
-    public: "/",
-    src: "/_dist",
+    public: "/linebot/",
+    src: "/linebot/_dist",
   },
   plugins: [
     /* ... */
@@ -27,5 +27,6 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
+    metaUrlPath: "/linebot/_snowpack"
   },
 };
